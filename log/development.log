@@ -39,3 +39,250 @@ Migrating to AddNameToUsers (20220809084014)
   [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-08-09 11:57:26 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 12.6ms | Allocations: 656)
+Completed 200 OK in 117ms (Views: 57.4ms | ActiveRecord: 0.0ms | Allocations: 5125)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-09 11:57:48 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 276)
+  Rendered devise/shared/_links.html.erb (Duration: 3.8ms | Allocations: 750)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 541.7ms | Allocations: 8070)
+  Rendered layout layouts/application.html.erb (Duration: 1437.8ms | Allocations: 99017)
+Completed 200 OK in 1485ms (Views: 1442.2ms | ActiveRecord: 6.4ms | Allocations: 108232)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-09 11:59:42 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 45.6ms | Allocations: 10454)
+  Rendered layout layouts/application.html.erb (Duration: 46.2ms | Allocations: 10559)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 0.0ms | Allocations: 11878)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+   <div class="field">
+    <%= f.label :full name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:       <div class="field">
+6:        <%= f.label :full name %><br />
+7:        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+8:      </div>
+9:    
+10:      <div class="field">
+11:        <%= f.label :email %><br />
+12:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+13:      </div>
+14:    
+15:      <div class="field">
+16:        <%= f.label :password %>
+17:        <% if @minimum_password_length %>
+18:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+19:        <% end %><br />
+20:        <%= f.password_field :password, autocomplete: "new-password" %>
+21:      </div>
+22:    
+23:      <div class="field">
+24:        <%= f.label :password_confirmation %><br />
+25:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+26:      </div>
+27:    
+28:      <div class="actions">
+29:        <%= f.submit "Sign up" %>
+30:      </div>
+31:    <% end %>
+32:    
+33:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-09 11:59:46 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1437)
+  Rendered layout layouts/application.html.erb (Duration: 4.3ms | Allocations: 1527)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 2183)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <h2>Sign up</h2>
+
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= render "devise/shared/error_messages", resource: resource %>
+   <div class="field">
+    <%= f.label :full name %><br />
+    <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "new-password" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "Sign up" %>
+  </div>
+<% end %>
+
+<%= render "devise/shared/links" %>
+
+):
+1:    <h2>Sign up</h2>
+2:    
+3:    <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+4:      <%= render "devise/shared/error_messages", resource: resource %>
+5:       <div class="field">
+6:        <%= f.label :full name %><br />
+7:        <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+8:      </div>
+9:    
+10:      <div class="field">
+11:        <%= f.label :email %><br />
+12:        <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+13:      </div>
+14:    
+15:      <div class="field">
+16:        <%= f.label :password %>
+17:        <% if @minimum_password_length %>
+18:        <em>(<%= @minimum_password_length %> characters minimum)</em>
+19:        <% end %><br />
+20:        <%= f.password_field :password, autocomplete: "new-password" %>
+21:      </div>
+22:    
+23:      <div class="field">
+24:        <%= f.label :password_confirmation %><br />
+25:        <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
+26:      </div>
+27:    
+28:      <div class="actions">
+29:        <%= f.submit "Sign up" %>
+30:      </div>
+31:    <% end %>
+32:    
+33:    <%= render "devise/shared/links" %>
+  
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+app/views/devise/registrations/new.html.erb:6: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-09 12:00:07 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.4ms | Allocations: 225)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 28.0ms | Allocations: 10011)
+  Rendered layout layouts/application.html.erb (Duration: 28.9ms | Allocations: 10106)
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.0ms | Allocations: 11297)
+
+
+  
+ActionView::Template::Error (undefined method `name' for #<User id: nil, email: "", created_at: nil, updated_at: nil, full_name: nil>):
+    4:   <%= render "devise/shared/error_messages", resource: resource %>
+    5:    <div class="field">
+    6:     <%= f.label :full_name %><br />
+    7:     <%= f.text_field :name, autofocus: true, autocomplete: "name" %>
+    8:   </div>
+    9: 
+   10:   <div class="field">
+  
+app/views/devise/registrations/new.html.erb:7
+app/views/devise/registrations/new.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-09 12:00:29 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 1.9ms | Allocations: 557)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 14.7ms | Allocations: 2890)
+  Rendered layout layouts/application.html.erb (Duration: 27.3ms | Allocations: 5677)
+Completed 200 OK in 36ms (Views: 33.0ms | ActiveRecord: 0.0ms | Allocations: 6976)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-09 12:00:41 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.5ms | Allocations: 225)
+  Rendered devise/shared/_links.html.erb (Duration: 2.5ms | Allocations: 557)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 15.9ms | Allocations: 2874)
+  Rendered layout layouts/application.html.erb (Duration: 28.2ms | Allocations: 5648)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 6941)
+
+
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategories (20220809101943)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (505.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (52.2ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809101943"]]
+  [1m[36mTRANSACTION (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
