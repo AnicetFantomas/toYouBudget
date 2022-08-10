@@ -7,9 +7,7 @@
 <section class="container>
   <%= link_to category_path(category.id) do %>
     <article class="row border my-1">
-      
       <div class="col-3">
-      
         <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
       </div>
       <div class="col-6 pt-3">
@@ -17,9 +15,9 @@
         <span class="date" > category.created_at</span>
       </div>
       <div>
-      <span class="amount-dsl">$<%= @category.amount%></span>
+        <span class="amount-dsl">$<%= @category.amount%></span>
       </div>
-     </article>
+    </article>
   <% end %>
   <br>
   <% @transactions.each do |trans| %>
@@ -35,6 +33,8 @@
   <% end %>
 </section>
 
-<div>
-  <div class=">
+<div class="bottom-container position-fixed bottom-o w-100" >
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW TRANSACTION", new_transactions_path, class:"buttom-btn" %>
+  </div>
 </div>

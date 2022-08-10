@@ -975,3 +975,11 @@ DETAIL:  Failing row contains (3, Tesla, https://www.flaticon.com/free-icon/tesl
 app/controllers/categories_controller.rb:27:in `block in create'
 app/controllers/categories_controller.rb:26:in `create'
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started GET "/" for 127.0.0.1 at 2022-08-10 16:46:34 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (21.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 22.9ms | Allocations: 548)
+Completed 200 OK in 152ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 3836)
+
+
