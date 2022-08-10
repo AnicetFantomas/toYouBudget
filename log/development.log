@@ -326,3 +326,652 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 630ms (Views: 117.4ms | ActiveRecord: 0.0ms | Allocations: 3837)
 
 
+Started GET "/" for 127.0.0.1 at 2022-08-10 09:25:00 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 35.8ms | Allocations: 324)
+Completed 200 OK in 40ms (Views: 38.0ms | Allocations: 1041)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2022-08-10 09:25:24 +0200
+Processing by TransactionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (86.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:6
+  Rendered transactions/index.html.erb within layouts/application (Duration: 366.4ms | Allocations: 4410)
+  Rendered layout layouts/application.html.erb (Duration: 2359.9ms | Allocations: 41009)
+Completed 200 OK in 2374ms (Views: 2363.0ms | ActiveRecord: 95.9ms | Allocations: 43991)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2022-08-10 09:25:32 +0200
+Processing by TransactionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/_form.html.erb (Duration: 58.6ms | Allocations: 3643)
+  Rendered transactions/new.html.erb within layouts/application (Duration: 62.4ms | Allocations: 4027)
+  Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 6512)
+Completed 200 OK in 126ms (Views: 75.3ms | ActiveRecord: 16.9ms | Allocations: 16713)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:00:15 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 314.7ms | Allocations: 3019)
+  Rendered layout layouts/application.html.erb (Duration: 315.3ms | Allocations: 3125)
+Completed 500 Internal Server Error in 934ms (Allocations: 5768)
+
+
+  
+ActionView::Template::Error (undefined method `safe_append=' for nil:NilClass
+
+@output_buffer.safe_append='
+              ^^^^^^^^^^^^^):
+    1: <%= notice %>
+    2:   <p class="alert alert-success"><%= notice %></p>
+    3: <% end %>
+    4: 
+    5: <% if alert %>
+    6:   <p class="alert alert-danger"><%= alert %></p>
+    7: <% end %>
+  
+app/views/categories/index.html.erb:4:in `compile'
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:01:22 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.2ms | Allocations: 1431)
+  Rendered layout layouts/application.html.erb (Duration: 4.5ms | Allocations: 1527)
+Completed 500 Internal Server Error in 12ms (Allocations: 2417)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<section class="container">
+  <% if @categories.blank? %>
+    <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+  <% else %>
+    <% @categories.each do |category| %>
+    <%= link_to category_path(category.id) do %>
+    <article class="row d-flex border my-1">
+      <div class="col-3">
+        <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+      </div>
+      <div class="col-6 pt-3">
+        <p class="category-name"><% category.name %></p>
+        <span class="date" > category.created_at</span>
+      </div>
+    </article>
+  <% end %>
+  <% end %>
+  <% end %>
+</section>
+
+<div class="bottom-container position-fixed bottom-0 w-100">
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+  </div>
+</div>
+
+):
+1:    <%= notice %>
+2:      <p class="alert alert-success"><%= notice %></p>
+3:    <% end %>
+4:    
+5:    <% if alert %>
+6:      <p class="alert alert-danger"><%= alert %></p>
+7:    <% end %>
+8:    <section class="container">
+9:      <% if @categories.blank? %>
+10:        <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+11:      <% else %>
+12:        <% @categories.each do |category| %>
+13:        <%= link_to category_path(category.id) do %>
+14:        <article class="row d-flex border my-1">
+15:          <div class="col-3">
+16:            <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+17:          </div>
+18:          <div class="col-6 pt-3">
+19:            <p class="category-name"><% category.name %></p>
+20:            <span class="date" > category.created_at</span>
+21:          </div>
+22:        </article>
+23:      <% end %>
+24:      <% end %>
+25:      <% end %>
+26:    </section>
+27:    
+28:    <div class="bottom-container position-fixed bottom-0 w-100">
+29:      <div class="inner-bottom-container text-center">
+30:        <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+31:      </div>
+32:    </div>
+  
+app/views/categories/index.html.erb:35: syntax error, unexpected `end', expecting end-of-input
+app/views/categories/index.html.erb:35: syntax error, unexpected `end', expecting end-of-input
+app/views/categories/index.html.erb:35: syntax error, unexpected `end', expecting end-of-input
+app/views/categories/index.html.erb:35: syntax error, unexpected `end', expecting end-of-input
+app/views/categories/index.html.erb:35: syntax error, unexpected `end', expecting end-of-input
+app/views/categories/index.html.erb:35: syntax error, unexpected `end', expecting end-of-input
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:02:10 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.5ms | Allocations: 2654)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 2748)
+Completed 500 Internal Server Error in 17ms (Allocations: 3621)
+
+
+  
+ActionView::Template::Error (undefined method `safe_append=' for nil:NilClass
+
+@output_buffer.safe_append='
+              ^^^^^^^^^^^^^):
+    1: <%= notice %>
+    2:   <p class="alert alert-success"><%= notice %></p>
+    3: <% end %>
+    4: 
+    5: <% if alert %>
+    6:   <p class="alert alert-danger"><%= alert %></p>
+    7: <% end %>
+  
+app/views/categories/index.html.erb:4:in `compile'
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:02:34 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 11.6ms | Allocations: 3916)
+  Rendered layout layouts/application.html.erb (Duration: 23.2ms | Allocations: 4010)
+Completed 500 Internal Server Error in 36ms (Allocations: 4880)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `alert' for #<Class:0x00007f19f975bb50>
+
+ if alert 
+    ^^^^^):
+    1: <%= notice %>
+    2:   <p class="alert alert-success"><%= notice %></p>
+    3: <% end %>
+    4: <% if alert %>
+    5:   <p class="alert alert-danger"><%= alert %></p>
+    6: <% end %>
+    7: <section class="container">
+  
+app/views/categories/index.html.erb:4:in `compile'
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:03:00 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2564)
+  Rendered layout layouts/application.html.erb (Duration: 13.7ms | Allocations: 2659)
+Completed 500 Internal Server Error in 22ms (Allocations: 3541)
+
+
+  
+ActionView::Template::Error (undefined method `safe_append=' for nil:NilClass
+
+@output_buffer.safe_append='<section class="container">
+              ^^^^^^^^^^^^^):
+    1: <%= notice %>
+    2:   <p class="alert alert-success"><%= notice %></p>
+    3: <% end %>
+    4: <section class="container">
+    5:   <% if @categories.blank? %>
+    6:     <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+    7:   <% else %>
+  
+app/views/categories/index.html.erb:4:in `compile'
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:09:40 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.7ms | Allocations: 1402)
+  Rendered layout layouts/application.html.erb (Duration: 4.8ms | Allocations: 1497)
+Completed 500 Internal Server Error in 12ms (Allocations: 2366)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<section class="container">
+  <% if @categories.blank? %>
+    <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+  <% else %>
+    <% @categories.each do |category| %>
+    <%= link_to category_path(category.id) do %>
+    <article class="row d-flex border my-1">
+      <div class="col-3">
+        <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+      </div>
+      <div class="col-6 pt-3">
+        <p class="category-name"><% category.name %></p>
+        <span class="date" > category.created_at</span>
+      </div>
+    </article>
+  <% end %>
+  <% end %>
+</section>
+
+<div class="bottom-container position-fixed bottom-0 w-100">
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+  </div>
+</div>
+
+):
+1:    <%= if notice %>
+2:      <p class="alert alert-success"><%= notice %></p>
+3:    <% end %>
+4:    <% if alert %>
+5:      <p class="alert alert-danger"><%= alert %></p>
+6:    <% end %>
+7:    <section class="container">
+8:      <% if @categories.blank? %>
+9:        <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+10:      <% else %>
+11:        <% @categories.each do |category| %>
+12:        <%= link_to category_path(category.id) do %>
+13:        <article class="row d-flex border my-1">
+14:          <div class="col-3">
+15:            <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+16:          </div>
+17:          <div class="col-6 pt-3">
+18:            <p class="category-name"><% category.name %></p>
+19:            <span class="date" > category.created_at</span>
+20:          </div>
+21:        </article>
+22:      <% end %>
+23:      <% end %>
+24:    </section>
+25:    
+26:    <div class="bottom-container position-fixed bottom-0 w-100">
+27:      <div class="inner-bottom-container text-center">
+28:        <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+29:      </div>
+30:    </div>
+  
+app/views/categories/index.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/categories/index.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/index.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/categories/index.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/index.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/categories/index.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/index.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/categories/index.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/index.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/categories/index.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+app/views/categories/index.html.erb:1: syntax error, unexpected ')', expecting `then' or ';' or '\n'
+app/views/categories/index.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting ')'
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:10:20 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.5ms | Allocations: 1400)
+  Rendered layout layouts/application.html.erb (Duration: 4.1ms | Allocations: 1495)
+Completed 500 Internal Server Error in 14ms (Allocations: 2364)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+<section class="container">
+  <% if @categories.blank? %>
+    <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+  <% else %>
+    <% @categories.each do |category| %>
+    <%= link_to category_path(category.id) do %>
+    <article class="row d-flex border my-1">
+      <div class="col-3">
+        <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+      </div>
+      <div class="col-6 pt-3">
+        <p class="category-name"><% category.name %></p>
+        <span class="date" > category.created_at</span>
+      </div>
+    </article>
+  <% end %>
+  <% end %>
+</section>
+
+<div class="bottom-container position-fixed bottom-0 w-100">
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+  </div>
+</div>
+
+):
+1:    <% if notice %>
+2:      <p class="alert alert-success"><%= notice %></p>
+3:    <% end %>
+4:    <% if alert %>
+5:      <p class="alert alert-danger"><%= alert %></p>
+6:    <% end %>
+7:    <section class="container">
+8:      <% if @categories.blank? %>
+9:        <p>Hello!!! You dont have yet any category on this page please click on the botton below to get one.</p>
+10:      <% else %>
+11:        <% @categories.each do |category| %>
+12:        <%= link_to category_path(category.id) do %>
+13:        <article class="row d-flex border my-1">
+14:          <div class="col-3">
+15:            <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+16:          </div>
+17:          <div class="col-6 pt-3">
+18:            <p class="category-name"><% category.name %></p>
+19:            <span class="date" > category.created_at</span>
+20:          </div>
+21:        </article>
+22:      <% end %>
+23:      <% end %>
+24:    </section>
+25:    
+26:    <div class="bottom-container position-fixed bottom-0 w-100">
+27:      <div class="inner-bottom-container text-center">
+28:        <%= link_to "NEW CATEGORY", new_category_path, class: "bottom-btn" %>
+29:      </div>
+30:    </div>
+  
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+app/views/categories/index.html.erb:33: syntax error, unexpected end-of-input, expecting `end'
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:11:04 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (89.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 745.6ms | Allocations: 4503)
+  Rendered layout layouts/application.html.erb (Duration: 855.0ms | Allocations: 7305)
+Completed 200 OK in 862ms (Views: 858.6ms | ActiveRecord: 401.6ms | Allocations: 8211)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:11:13 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 31.6ms | Allocations: 1837)
+  Rendered categories/new.html.erb within layouts/application (Duration: 58.8ms | Allocations: 2156)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 4518)
+Completed 200 OK in 237ms (Views: 70.7ms | ActiveRecord: 153.3ms | Allocations: 6862)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:13:44 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 7.8ms | Allocations: 1696)
+  Rendered categories/new.html.erb within layouts/application (Duration: 12.7ms | Allocations: 1812)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 4280)
+Completed 422 Unprocessable Entity in 319ms (Views: 34.0ms | ActiveRecord: 0.0ms | Allocations: 6992)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:16:36 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 5.1ms | Allocations: 1498)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1629)
+  Rendered layout layouts/application.html.erb (Duration: 770.6ms | Allocations: 16476)
+Completed 200 OK in 1064ms (Views: 774.8ms | ActiveRecord: 253.3ms | Allocations: 20373)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:16:50 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 8.1ms | Allocations: 1481)
+  Rendered categories/new.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1589)
+  Rendered layout layouts/application.html.erb (Duration: 16.6ms | Allocations: 3943)
+Completed 422 Unprocessable Entity in 60ms (Views: 18.2ms | ActiveRecord: 0.0ms | Allocations: 5950)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:33:51 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 7.6ms | Allocations: 1464)
+  Rendered categories/new.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1572)
+  Rendered layout layouts/application.html.erb (Duration: 147.6ms | Allocations: 3929)
+Completed 422 Unprocessable Entity in 308ms (Views: 149.0ms | ActiveRecord: 75.8ms | Allocations: 8074)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:33:54 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 9.1ms | Allocations: 1233)
+  Rendered categories/new.html.erb within layouts/application (Duration: 9.8ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 3703)
+Completed 200 OK in 23ms (Views: 22.3ms | ActiveRecord: 0.0ms | Allocations: 3988)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:33:59 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 5.6ms | Allocations: 1464)
+  Rendered categories/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1572)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3926)
+Completed 422 Unprocessable Entity in 29ms (Views: 15.9ms | ActiveRecord: 0.0ms | Allocations: 5099)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:34:45 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 98.3ms | Allocations: 1233)
+  Rendered categories/new.html.erb within layouts/application (Duration: 119.8ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 171.3ms | Allocations: 3712)
+Completed 200 OK in 174ms (Views: 173.0ms | ActiveRecord: 0.0ms | Allocations: 3997)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:34:51 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 12.2ms | Allocations: 1464)
+  Rendered categories/new.html.erb within layouts/application (Duration: 19.7ms | Allocations: 1572)
+  Rendered layout layouts/application.html.erb (Duration: 42.7ms | Allocations: 3926)
+Completed 422 Unprocessable Entity in 66ms (Views: 44.6ms | ActiveRecord: 0.0ms | Allocations: 5087)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:34:58 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>"1"}, "commit"=>"Create Category"}
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 19.8ms | Allocations: 1464)
+  Rendered categories/new.html.erb within layouts/application (Duration: 20.6ms | Allocations: 1572)
+  Rendered layout layouts/application.html.erb (Duration: 34.6ms | Allocations: 3929)
+Completed 422 Unprocessable Entity in 41ms (Views: 36.0ms | ActiveRecord: 0.0ms | Allocations: 5092)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-10 11:37:10 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 23.6ms | Allocations: 263)
+  Rendered devise/shared/_links.html.erb (Duration: 10.4ms | Allocations: 750)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 197.3ms | Allocations: 4084)
+  Rendered layout layouts/application.html.erb (Duration: 213.6ms | Allocations: 6646)
+Completed 200 OK in 290ms (Views: 218.5ms | ActiveRecord: 29.2ms | Allocations: 14127)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-08-10 11:37:52 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anicet Murhula", "email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :full_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f19faa9fc70>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anicet Murhula", "email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (971.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anicetmurhula20@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 591)
+  Rendered devise/shared/_links.html.erb (Duration: 0.6ms | Allocations: 140)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 9.2ms | Allocations: 2766)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 5229)
+Completed 200 OK in 5824ms (Views: 22.1ms | ActiveRecord: 971.6ms | Allocations: 19438)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-08-10 11:38:04 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 354)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 427.3ms | Allocations: 2573)
+  Rendered layout layouts/application.html.erb (Duration: 454.3ms | Allocations: 5118)
+Completed 200 OK in 465ms (Views: 458.9ms | ActiveRecord: 0.0ms | Allocations: 6481)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-10 11:38:40 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "anicetmurhula20@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 324ms (ActiveRecord: 0.8ms | Allocations: 8612)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-10 11:39:10 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "anicetmurhula20@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 9ms (ActiveRecord: 0.6ms | Allocations: 1519)
+
+
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-10 11:50:08 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "anicetmurhula20@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 38ms (ActiveRecord: 14.6ms | Allocations: 4528)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 11:52:55 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.1ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" IS NULL[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.6ms | Allocations: 854)
+  Rendered layout layouts/application.html.erb (Duration: 78.7ms | Allocations: 15704)
+Completed 200 OK in 134ms (Views: 85.9ms | ActiveRecord: 15.7ms | Allocations: 19615)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:53:01 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 6.0ms | Allocations: 1432)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.6ms | Allocations: 1549)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3912)
+Completed 200 OK in 32ms (Views: 19.6ms | ActiveRecord: 3.3ms | Allocations: 5414)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:53:07 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:28:in `block in create'
+  [1m[36mCategory Create (318.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", nil], ["created_at", "2022-08-10 09:53:07.526658"], ["updated_at", "2022-08-10 09:53:07.526658"]]
+  ↳ app/controllers/categories_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/categories_controller.rb:28:in `block in create'
+Completed 500 Internal Server Error in 334ms (ActiveRecord: 319.0ms | Allocations: 4461)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "categories" violates not-null constraint
+DETAIL:  Failing row contains (1, Tesla, https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page..., null, 2022-08-10 09:53:07.526658, 2022-08-10 09:53:07.526658).
+):
+  
+app/controllers/categories_controller.rb:28:in `block in create'
+app/controllers/categories_controller.rb:27:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:54:00 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 10.7ms | Allocations: 1489)
+  Rendered categories/new.html.erb within layouts/application (Duration: 11.6ms | Allocations: 1620)
+  Rendered layout layouts/application.html.erb (Duration: 59.5ms | Allocations: 16461)
+Completed 200 OK in 101ms (Views: 63.5ms | ActiveRecord: 9.2ms | Allocations: 20362)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:54:06 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:28:in `block in create'
+  [1m[36mCategory Create (3.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", nil], ["created_at", "2022-08-10 09:54:06.694466"], ["updated_at", "2022-08-10 09:54:06.694466"]]
+  ↳ app/controllers/categories_controller.rb:28:in `block in create'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/categories_controller.rb:28:in `block in create'
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.5ms | Allocations: 4194)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "categories" violates not-null constraint
+DETAIL:  Failing row contains (2, Tesla, https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page..., null, 2022-08-10 09:54:06.694466, 2022-08-10 09:54:06.694466).
+):
+  
+app/controllers/categories_controller.rb:28:in `block in create'
+app/controllers/categories_controller.rb:27:in `create'
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 11:54:45 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 4.9ms | Allocations: 1504)
+  Rendered categories/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 1635)
+  Rendered layout layouts/application.html.erb (Duration: 56.6ms | Allocations: 16475)
+Completed 200 OK in 115ms (Views: 70.8ms | ActiveRecord: 6.7ms | Allocations: 20376)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:54:52 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (2.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", nil], ["created_at", "2022-08-10 09:54:52.353134"], ["updated_at", "2022-08-10 09:54:52.353134"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.8ms | Allocations: 3700)
+
+
+  
+ActiveRecord::NotNullViolation (PG::NotNullViolation: ERROR:  null value in column "user_id" of relation "categories" violates not-null constraint
+DETAIL:  Failing row contains (3, Tesla, https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page..., null, 2022-08-10 09:54:52.353134, 2022-08-10 09:54:52.353134).
+):
+  
+app/controllers/categories_controller.rb:27:in `block in create'
+app/controllers/categories_controller.rb:26:in `create'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m

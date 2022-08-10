@@ -1,10 +1,40 @@
-<p style="color: green"><%= notice %></p>
-
-<%= render @category %>
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><% alert %></p>
+<% end %>
+<section class="container>
+  <%= link_to category_path(category.id) do %>
+    <article class="row border my-1">
+      
+      <div class="col-3">
+      
+        <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+      </div>
+      <div class="col-6 pt-3">
+        <p class="category-name"><% category.name %></p>
+        <span class="date" > category.created_at</span>
+      </div>
+      <div>
+      <span class="amount-dsl">$<%= @category.amount%></span>
+      </div>
+     </article>
+  <% end %>
+  <br>
+  <% @transactions.each do |trans| %>
+    <article class="row border my-1">
+      <div class="col-9">
+        <p class="trans-name">Transaction <%= trans.name %></p>
+        <p class="date"><%= trans.created_at  %><%= trans.name %></p>
+      </div>
+       <div>
+        <span class="amount">$<%= trans.amount %><span>
+      </div>
+    </article>
+  <% end %>
+</section>
 
 <div>
-  <%= link_to "Edit this category", edit_category_path(@category) %> |
-  <%= link_to "Back to categories", categories_path %>
-
-  <%= button_to "Destroy this category", @category, method: :delete %>
+  <div class=">
 </div>

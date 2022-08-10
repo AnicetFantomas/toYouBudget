@@ -1,5 +1,5 @@
 class Category < ApplicationRecord
-  belongs_to :user, foreign_key: :user_id
+  belongs_to :user, :optional => true
   has_many :categories_transactions, dependent: :delete_all
   has_many :tansactions, through: :categories_transactions
   validates :name, presence: true
