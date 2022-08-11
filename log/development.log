@@ -1080,3 +1080,64 @@ Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms | Allocations: 344
 
 
   [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+Started GET "/" for 127.0.0.1 at 2022-08-11 11:16:51 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (21.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 20.0ms | Allocations: 548)
+Completed 200 OK in 71ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 3838)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2022-08-11 11:17:10 +0200
+Processing by TransactionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (125.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:2
+  Rendered transactions/index.html.erb within layouts/application (Duration: 131.8ms | Allocations: 1295)
+  Rendered layout layouts/application.html.erb (Duration: 362.4ms | Allocations: 37706)
+Completed 200 OK in 471ms (Views: 240.3ms | ActiveRecord: 125.9ms | Allocations: 40781)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 11:17:26 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 4.9ms | Allocations: 323)
+Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 954)
+
+
+Started GET "/transactions" for 127.0.0.1 at 2022-08-11 11:17:35 +0200
+Processing by TransactionsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering transactions/index.html.erb within layouts/application
+  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
+  ↳ app/views/transactions/index.html.erb:2
+  Rendered transactions/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 732)
+  Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3417)
+Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.6ms | Allocations: 3733)
+
+
+Started GET "/transactions/new" for 127.0.0.1 at 2022-08-11 11:17:54 +0200
+Processing by TransactionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 117.0ms | Allocations: 3936)
+  Rendered layout layouts/application.html.erb (Duration: 117.6ms | Allocations: 4042)
+Completed 500 Internal Server Error in 287ms (ActiveRecord: 97.5ms | Allocations: 14203)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    15:  
+    16: 
+    17:     <h3 class="mt-3">Categories</h3>
+    18:     <% @categories.each do |category| %>
+    19:       <%= label_tag category.name %>
+    20:       <%= check_box_tag "categories[#{category.id}]", category.name %>
+    21:       <br />
+  
+app/views/transactions/new.html.erb:18
+app/views/transactions/new.html.erb:8
