@@ -1141,3 +1141,87 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass
   
 app/views/transactions/new.html.erb:18
 app/views/transactions/new.html.erb:8
+Started GET "/transactions/new" for 127.0.0.1 at 2022-08-11 14:37:07 +0200
+Processing by TransactionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering transactions/new.html.erb within layouts/application
+  Rendered transactions/new.html.erb within layouts/application (Duration: 271.3ms | Allocations: 3313)
+  Rendered layout layouts/application.html.erb (Duration: 420.1ms | Allocations: 3407)
+Completed 500 Internal Server Error in 1226ms (ActiveRecord: 383.3ms | Allocations: 10403)
+
+
+  
+ActionView::Template::Error (undefined method `each' for nil:NilClass
+
+'.freeze;     @categories.each do |category| 
+                         ^^^^^):
+    15:  
+    16: 
+    17:     <h3 class="mt-3">Categories</h3>
+    18:     <% @categories.each do |category| %>
+    19:       <%= label_tag category.name %>
+    20:       <%= check_box_tag "categories[#{category.id}]", category.name %>
+    21:       <br />
+  
+app/views/transactions/new.html.erb:18
+app/views/transactions/new.html.erb:8
+Started GET "/" for 127.0.0.1 at 2022-08-11 14:37:20 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.7ms | Allocations: 322)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.0ms | Allocations: 940)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 14:37:22 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 2ms (Views: 1.0ms | ActiveRecord: 0.0ms | Allocations: 267)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 14:37:23 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 242)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 14:37:24 +0200
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.2ms | Allocations: 26)
+Completed 200 OK in 2ms (Views: 1.1ms | ActiveRecord: 0.0ms | Allocations: 242)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-11 14:38:52 +0200
+  
+ArgumentError (Before process_action callback :authenticate_user! has not been defined):
+  
+app/controllers/splashs_controller.rb:2:in `<class:SplashsController>'
+app/controllers/splashs_controller.rb:1:in `<main>'
+Started GET "/" for 127.0.0.1 at 2022-08-11 14:41:23 +0200
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 2.1ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 1341.8ms | Allocations: 15593)
+Completed 200 OK in 1502ms (Views: 1344.0ms | ActiveRecord: 0.0ms | Allocations: 17328)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-08-11 14:42:58 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered devise/shared/_links.html.erb (Duration: 69.9ms | Allocations: 851)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 674.3ms | Allocations: 4971)
+  Rendered layout layouts/application.html.erb (Duration: 682.7ms | Allocations: 7529)
+Completed 200 OK in 1002ms (Views: 686.7ms | ActiveRecord: 163.7ms | Allocations: 15336)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-11 14:43:29 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"1"}, "commit"=>"Log in"}
+  [1m[36mUser Load (314.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "anicetmurhula20@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 659ms (ActiveRecord: 315.3ms | Allocations: 3561)
+
+
