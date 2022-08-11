@@ -983,3 +983,100 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 152ms (Views: 28.6ms | ActiveRecord: 0.0ms | Allocations: 3836)
 
 
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 17:52:16 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (114.9ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 175.0ms | Allocations: 4723)
+  Rendered layout layouts/application.html.erb (Duration: 387.1ms | Allocations: 40801)
+Completed 200 OK in 414ms (Views: 389.6ms | ActiveRecord: 122.8ms | Allocations: 43794)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 17:52:20 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 14.7ms | Allocations: 1422)
+  Rendered categories/new.html.erb within layouts/application (Duration: 16.6ms | Allocations: 1809)
+  Rendered layout layouts/application.html.erb (Duration: 23.1ms | Allocations: 4291)
+Completed 200 OK in 182ms (Views: 24.8ms | ActiveRecord: 99.3ms | Allocations: 8249)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 17:52:30 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (4.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 13.7ms | Allocations: 908)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3262)
+Completed 200 OK in 25ms (Views: 19.4ms | ActiveRecord: 4.4ms | Allocations: 3598)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 17:52:35 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.3ms | Allocations: 820)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3173)
+Completed 200 OK in 17ms (Views: 16.1ms | ActiveRecord: 0.5ms | Allocations: 3462)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 17:52:44 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 3.1ms | Allocations: 620)
+  Rendered categories/new.html.erb within layouts/application (Duration: 3.9ms | Allocations: 732)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 3084)
+Completed 200 OK in 14ms (Views: 13.5ms | ActiveRecord: 0.0ms | Allocations: 3377)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 17:53:13 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.8ms | Allocations: 804)
+  Rendered layout layouts/application.html.erb (Duration: 18.0ms | Allocations: 3156)
+Completed 200 OK in 25ms (Views: 22.9ms | ActiveRecord: 0.6ms | Allocations: 3440)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 17:53:46 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.8ms | Allocations: 801)
+  Rendered layout layouts/application.html.erb (Duration: 13.0ms | Allocations: 3153)
+Completed 200 OK in 16ms (Views: 14.4ms | ActiveRecord: 0.5ms | Allocations: 3434)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-10 17:53:50 +0200
+Processing by CategoriesController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.9ms | Allocations: 629)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.7ms | Allocations: 737)
+  Rendered layout layouts/application.html.erb (Duration: 9.1ms | Allocations: 3089)
+Completed 200 OK in 11ms (Views: 10.1ms | ActiveRecord: 0.0ms | Allocations: 3377)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-10 17:53:57 +0200
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.9ms | Allocations: 810)
+  Rendered layout layouts/application.html.erb (Duration: 17.8ms | Allocations: 3162)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.5ms | Allocations: 3446)
+
+
+  [1m[36mCategory Load (0.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m

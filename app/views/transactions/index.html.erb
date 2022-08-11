@@ -1,14 +1,22 @@
-<p style="color: green"><%= notice %></p>
-
-<h1>Transactions</h1>
-
-<div id="transactions">
-  <% @transactions.each do |transaction| %>
-    <%= render transaction %>
-    <p>
-      <%= link_to "Show this transaction", transaction %>
-    </p>
+<section class="container">
+  <% @transactions.each do |trans| %>
+    <div class="row border my-1">
+      <div class="col-9">
+        <p class="trans-name"> <%= trans.name %></p>
+        <p class="date"><%= trans.created_at%></p>
+      </div>
+      <div class="col-3">
+        <span class="amount-dsl">$<%= trans.amount %></span>
+      </div>
+    </div>
   <% end %>
 </div>
+</section>
+<div id="transactions">
+  
+<div class="bottom-container position-fixed bottom-0 w-100 btn-bg">
+  <div class="inner-bottom-container text-center">
+    <%= link_to "New transaction", new_transaction_path, class: "text-white" %>
+  </div>
+</div>
 
-<%= link_to "New transaction", new_transaction_path %>
