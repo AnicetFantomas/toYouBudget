@@ -3,7 +3,7 @@ class TransactionsController < ApplicationController
 
   # GET /transactions or /transactions.json
   def index
-    @transactions = Transaction.all
+    @transactions = Transaction.where(user: current_user)
   end
 
   # GET /transactions/1 or /transactions/1.json
@@ -13,15 +13,15 @@ class TransactionsController < ApplicationController
   # GET /transactions/new
   def new
     @transaction = Transaction.new
-  end
-
-  # GET /transactions/1/edit
-  def edit
+    @categories = Category.where(user: current_user)
   end
 
   # POST /transactions or /transactions.json
   def create
     @transaction = Transaction.new(transaction_params)
+    @transaction = current_user
+
+    create_categ_tansactions unless params[:categories].blank?
 
     respond_to do |format|
       if @transaction.save
@@ -29,19 +29,6 @@ class TransactionsController < ApplicationController
         format.json { render :show, status: :created, location: @transaction }
       else
         format.html { render :new, status: :unprocessable_entity }
-        format.json { render json: @transaction.errors, status: :unprocessable_entity }
-      end
-    end
-  end
-
-  # PATCH/PUT /transactions/1 or /transactions/1.json
-  def update
-    respond_to do |format|
-      if @transaction.update(transaction_params)
-        format.html { redirect_to transaction_url(@transaction), notice: "Transaction was successfully updated." }
-        format.json { render :show, status: :ok, location: @transaction }
-      else
-        format.html { render :edit, status: :unprocessable_entity }
         format.json { render json: @transaction.errors, status: :unprocessable_entity }
       end
     end
@@ -61,6 +48,12 @@ class TransactionsController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_transaction
       @transaction = Transaction.find(params[:id])
+    end
+
+    def create_categ_tansactions
+      params[:categories].each do |k, _v|
+        CategoriesTransaction.create(category: Category.find(k), transaction: @transactions)
+      end
     end
 
     # Only allow a list of trusted parameters through.
