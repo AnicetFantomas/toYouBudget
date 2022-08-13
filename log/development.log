@@ -5797,3 +5797,212 @@ Processing by CategoriesController#show as HTML
 Completed 200 OK in 41ms (Views: 19.2ms | ActiveRecord: 1.2ms | Allocations: 5923)
 
 
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:52:31 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTransac Load (0.7ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" INNER JOIN "categories_transacs" ON "transacs"."id" = "categories_transacs"."transac_id" WHERE "categories_transacs"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/models/category.rb:9:in `amount'
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.9ms | Allocations: 1010)
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 19.4ms | Allocations: 3718)
+Completed 200 OK in 35ms (Views: 19.9ms | ActiveRecord: 5.1ms | Allocations: 5902)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:54:06 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTransac Load (5.3ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" INNER JOIN "categories_transacs" ON "transacs"."id" = "categories_transacs"."transac_id" WHERE "categories_transacs"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/models/category.rb:9:in `amount'
+  Rendered categories/show.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1010)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3729)
+Completed 200 OK in 30ms (Views: 14.5ms | ActiveRecord: 6.1ms | Allocations: 5906)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-13 21:54:20 +0200
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 2.6ms | Allocations: 813)
+  Rendered categories/new.html.erb within layouts/application (Duration: 5.1ms | Allocations: 1132)
+  Rendered layouts/_navbar.html.erb (Duration: 1.4ms | Allocations: 324)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3840)
+Completed 200 OK in 24ms (Views: 16.2ms | ActiveRecord: 0.4ms | Allocations: 5511)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-13 21:54:20 +0200
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 1.7ms | Allocations: 465)
+  Rendered categories/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 573)
+  Rendered layouts/_navbar.html.erb (Duration: 1.0ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 11.0ms | Allocations: 3293)
+Completed 200 OK in 20ms (Views: 11.9ms | ActiveRecord: 0.5ms | Allocations: 4908)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-13 21:54:25 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.6ms | Allocations: 825)
+  Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 13.5ms | Allocations: 3529)
+Completed 200 OK in 25ms (Views: 13.2ms | ActiveRecord: 1.8ms | Allocations: 5217)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-13 21:54:25 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 825)
+  Rendered layouts/_navbar.html.erb (Duration: 1.2ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 11.9ms | Allocations: 3538)
+Completed 200 OK in 24ms (Views: 12.6ms | ActiveRecord: 0.8ms | Allocations: 5235)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-13 21:54:31 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.3ms | Allocations: 825)
+  Rendered layouts/_navbar.html.erb (Duration: 1.3ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 14.3ms | Allocations: 3530)
+Completed 200 OK in 22ms (Views: 14.7ms | ActiveRecord: 0.8ms | Allocations: 5212)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-13 21:55:32 +0200
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.0ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 6.8ms | Allocations: 827)
+  Rendered layouts/_navbar.html.erb (Duration: 3.7ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 22.4ms | Allocations: 3532)
+Completed 200 OK in 25ms (Views: 22.7ms | ActiveRecord: 1.0ms | Allocations: 3877)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:55:38 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTransac Load (0.4ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" INNER JOIN "categories_transacs" ON "transacs"."id" = "categories_transacs"."transac_id" WHERE "categories_transacs"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/models/category.rb:9:in `amount'
+  Rendered categories/show.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1010)
+  Rendered layouts/_navbar.html.erb (Duration: 4.1ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 21.5ms | Allocations: 3716)
+Completed 200 OK in 39ms (Views: 22.5ms | ActiveRecord: 1.3ms | Allocations: 5913)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:55:42 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (6.3ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTransac Load (0.9ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" INNER JOIN "categories_transacs" ON "transacs"."id" = "categories_transacs"."transac_id" WHERE "categories_transacs"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/models/category.rb:9:in `amount'
+  Rendered categories/show.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1010)
+  Rendered layouts/_navbar.html.erb (Duration: 1.6ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 17.2ms | Allocations: 3715)
+Completed 200 OK in 34ms (Views: 17.3ms | ActiveRecord: 7.6ms | Allocations: 5897)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:55:51 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (2.7ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  [1m[36mTransac Load (1.5ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" INNER JOIN "categories_transacs" ON "transacs"."id" = "categories_transacs"."transac_id" WHERE "categories_transacs"."category_id" = $1[0m  [["category_id", 2]]
+  ↳ app/models/category.rb:9:in `amount'
+  Rendered categories/show.html.erb within layouts/application (Duration: 6.8ms | Allocations: 1010)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3729)
+Completed 200 OK in 40ms (Views: 19.2ms | ActiveRecord: 6.7ms | Allocations: 5903)
+
+
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:57:54 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 8.2ms | Allocations: 3147)
+  Rendered layout layouts/application.html.erb (Duration: 9.0ms | Allocations: 3241)
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 0.8ms | Allocations: 6011)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for nil:NilClass
+
+      <span class="user-name">'.freeze;@output_buffer.append=( @user.full_name );@output_buffer.safe_append='</span>
+                                                                    ^^^^^^^^^^):
+    13:     <div class="col-6 pt-3">
+    14:       <p class="category-name"><%= @category.name %></p>
+    15:       <span class="date"><%= @category.created_at %></span>
+    16:       <span class="user-name"><%= @user.full_name %></span>
+    17:     </div>
+    18:     <div class="col-3 pt-3">
+    19:       <span class="amount-dls">$<%= @category.amount %></span>
+  
+app/views/categories/show.html.erb:16
+app/views/categories/show.html.erb:8
+Started GET "/categories/2" for 127.0.0.1 at 2022-08-13 21:59:42 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 46.6ms | Allocations: 5930)
+  Rendered layout layouts/application.html.erb (Duration: 49.0ms | Allocations: 6024)
+Completed 500 Internal Server Error in 66ms (ActiveRecord: 0.8ms | Allocations: 9006)
+
+
+  
+ActionView::Template::Error (undefined method `full_name' for User:Class):
+    13:     <div class="col-6 pt-3">
+    14:       <p class="category-name"><%= @category.name %></p>
+    15:       <span class="date"><%= @category.created_at %></span>
+    16:       <span class="user-name"><%= User.full_name %></span>
+    17:     </div>
+    18:     <div class="col-3 pt-3">
+    19:       <span class="amount-dls">$<%= @category.amount %></span>
+  
+app/views/categories/show.html.erb:16
+app/views/categories/show.html.erb:8
