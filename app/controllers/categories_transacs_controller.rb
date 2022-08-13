@@ -1,5 +1,5 @@
 class CategoriesTransacsController < ApplicationController
-  before_action :set_categories_transac, only: %i[ show edit update destroy ]
+  before_action :set_categories_transac, only: %i[show edit update destroy]
 
   # GET /categories_transacs or /categories_transacs.json
   def index
@@ -7,8 +7,7 @@ class CategoriesTransacsController < ApplicationController
   end
 
   # GET /categories_transacs/1 or /categories_transacs/1.json
-  def show
-  end
+  def show; end
 
   # GET /categories_transacs/new
   def new
@@ -16,8 +15,7 @@ class CategoriesTransacsController < ApplicationController
   end
 
   # GET /categories_transacs/1/edit
-  def edit
-  end
+  def edit; end
 
   # POST /categories_transacs or /categories_transacs.json
   def create
@@ -25,7 +23,10 @@ class CategoriesTransacsController < ApplicationController
 
     respond_to do |format|
       if @categories_transac.save
-        format.html { redirect_to categories_transac_url(@categories_transac), notice: "Categories transac was successfully created." }
+        format.html do
+          redirect_to categories_transac_url(@categories_transac),
+                      notice: 'Categories transac was successfully created.'
+        end
         format.json { render :show, status: :created, location: @categories_transac }
       else
         format.html { render :new, status: :unprocessable_entity }
@@ -38,7 +39,10 @@ class CategoriesTransacsController < ApplicationController
   def update
     respond_to do |format|
       if @categories_transac.update(categories_transac_params)
-        format.html { redirect_to categories_transac_url(@categories_transac), notice: "Categories transac was successfully updated." }
+        format.html do
+          redirect_to categories_transac_url(@categories_transac),
+                      notice: 'Categories transac was successfully updated.'
+        end
         format.json { render :show, status: :ok, location: @categories_transac }
       else
         format.html { render :edit, status: :unprocessable_entity }
@@ -52,19 +56,20 @@ class CategoriesTransacsController < ApplicationController
     @categories_transac.destroy
 
     respond_to do |format|
-      format.html { redirect_to categories_transacs_url, notice: "Categories transac was successfully destroyed." }
+      format.html { redirect_to categories_transacs_url, notice: 'Categories transac was successfully destroyed.' }
       format.json { head :no_content }
     end
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_categories_transac
-      @categories_transac = CategoriesTransac.find(params[:id])
-    end
 
-    # Only allow a list of trusted parameters through.
-    def categories_transac_params
-      params.require(:categories_transac).permit(:transacs_id, :categories_id)
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_categories_transac
+    @categories_transac = CategoriesTransac.find(params[:id])
+  end
+
+  # Only allow a list of trusted parameters through.
+  def categories_transac_params
+    params.require(:categories_transac).permit(:transacs_id, :categories_id)
+  end
 end
