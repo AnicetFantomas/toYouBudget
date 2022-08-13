@@ -1,17 +1,17 @@
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1605976831841687025)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (36.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to DeviseCreateUsers (20220809083653)
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (1160.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "confirmation_token" character varying, "confirmed_at" timestamp(6), "confirmation_sent_at" timestamp(6), "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
   [1m[35m (65.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
   [1m[35m (53.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809083653"]]
-  [1m[36mTRANSACTION (47.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (47.6ms)[0m  [1m[35mCOMMIT[0m
 Migrating to AddNameToUsers (20220809084014)
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "full_name" character varying[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809084014"]]
-  [1m[36mTRANSACTION (9.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (9.6ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::InternalMetadata Load (289.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1605976831841687025)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -22,21 +22,21 @@ Migrating to AddNameToUsers (20220809084014)
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to DeviseCreateUsers (20220809083653)
-  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (1.4ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (99.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "confirmation_token" character varying, "confirmed_at" timestamp(6), "confirmation_sent_at" timestamp(6), "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
   [1m[35m (71.2ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
   [1m[35m (68.8ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809083653"]]
-  [1m[36mTRANSACTION (16.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (16.1ms)[0m  [1m[35mCOMMIT[0m
 Migrating to AddNameToUsers (20220809084014)
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "full_name" character varying[0m
   [1m[36mActiveRecord::SchemaMigration Create (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809084014"]]
-  [1m[36mTRANSACTION (8.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (8.2ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mActiveRecord::InternalMetadata Create (1.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-09 09:45:37.929687"], ["updated_at", "2022-08-09 09:45:37.929687"]]
-  [1m[36mTRANSACTION (13.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (13.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Started GET "/" for 127.0.0.1 at 2022-08-09 11:57:26 +0200
@@ -275,46 +275,46 @@ Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.0ms | Allocations: 694
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
 Migrating to CreateCategories (20220809101943)
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[35m (505.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
 FOREIGN KEY ("user_id")
   REFERENCES "users" ("id")
 )[0m
   [1m[35m (52.2ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809101943"]]
-  [1m[36mTRANSACTION (17.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (17.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateTransactions (20220809102452)
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (155.2ms)[0m  [1m[35mCREATE TABLE "transactions" ("id" bigserial primary key, "name" character varying, "amount" decimal, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_77364e6416"
+Migrating to CreateTransacs (20220809102452)
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (155.2ms)[0m  [1m[35mCREATE TABLE "transacs" ("id" bigserial primary key, "name" character varying, "amount" decimal, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_77364e6416"
 FOREIGN KEY ("user_id")
   REFERENCES "users" ("id")
 )[0m
-  [1m[35m (74.6ms)[0m  [1m[35mCREATE INDEX "index_transactions_on_user_id" ON "transactions" ("user_id")[0m
+  [1m[35m (74.6ms)[0m  [1m[35mCREATE INDEX "index_transacs_on_user_id" ON "transacs" ("user_id")[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809102452"]]
-  [1m[36mTRANSACTION (77.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (77.8ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
-Migrating to CreateCategoriesTransactions (20220809103211)
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
-  [1m[35m (92.5ms)[0m  [1m[35mCREATE TABLE "categories_transactions" ("id" bigserial primary key, "transactions_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e9ec934aba"
-FOREIGN KEY ("transactions_id")
-  REFERENCES "transactions" ("id")
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (92.5ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transacs_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_e9ec934aba"
+FOREIGN KEY ("transacs_id")
+  REFERENCES "transacs" ("id")
 , CONSTRAINT "fk_rails_4986b7983a"
 FOREIGN KEY ("categories_id")
   REFERENCES "categories" ("id")
 )[0m
-  [1m[35m (63.4ms)[0m  [1m[35mCREATE INDEX "index_categories_transactions_on_transactions_id" ON "categories_transactions" ("transactions_id")[0m
-  [1m[35m (76.9ms)[0m  [1m[35mCREATE INDEX "index_categories_transactions_on_categories_id" ON "categories_transactions" ("categories_id")[0m
+  [1m[35m (63.4ms)[0m  [1m[35mCREATE INDEX "index_categories_transacs_on_transacs_id" ON "categories_transacs" ("transacs_id")[0m
+  [1m[35m (76.9ms)[0m  [1m[35mCREATE INDEX "index_categories_transacs_on_categories_id" ON "categories_transacs" ("categories_id")[0m
   [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809103211"]]
-  [1m[36mTRANSACTION (55.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (55.9ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
@@ -333,23 +333,23 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 40ms (Views: 38.0ms | Allocations: 1041)
 
 
-Started GET "/transactions" for 127.0.0.1 at 2022-08-10 09:25:24 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for 127.0.0.1 at 2022-08-10 09:25:24 +0200
+Processing by TransacsController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (86.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:6
-  Rendered transactions/index.html.erb within layouts/application (Duration: 366.4ms | Allocations: 4410)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (86.9ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:6
+  Rendered transacs/index.html.erb within layouts/application (Duration: 366.4ms | Allocations: 4410)
   Rendered layout layouts/application.html.erb (Duration: 2359.9ms | Allocations: 41009)
 Completed 200 OK in 2374ms (Views: 2363.0ms | ActiveRecord: 95.9ms | Allocations: 43991)
 
 
-Started GET "/transactions/new" for 127.0.0.1 at 2022-08-10 09:25:32 +0200
-Processing by TransactionsController#new as HTML
+Started GET "/transacs/new" for 127.0.0.1 at 2022-08-10 09:25:32 +0200
+Processing by TransacsController#new as HTML
   Rendering layout layouts/application.html.erb
-  Rendering transactions/new.html.erb within layouts/application
-  Rendered transactions/_form.html.erb (Duration: 58.6ms | Allocations: 3643)
-  Rendered transactions/new.html.erb within layouts/application (Duration: 62.4ms | Allocations: 4027)
+  Rendering transacs/new.html.erb within layouts/application
+  Rendered transacs/_form.html.erb (Duration: 58.6ms | Allocations: 3643)
+  Rendered transacs/new.html.erb within layouts/application (Duration: 62.4ms | Allocations: 4027)
   Rendered layout layouts/application.html.erb (Duration: 73.9ms | Allocations: 6512)
 Completed 200 OK in 126ms (Views: 75.3ms | ActiveRecord: 16.9ms | Allocations: 16713)
 
@@ -831,9 +831,9 @@ Started POST "/users" for 127.0.0.1 at 2022-08-10 11:37:52 +0200
 Processing by Devise::RegistrationsController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anicet Murhula", "email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
 [31mUnpermitted parameter: :full_name. Context: { controller: Devise::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x00007f19faa9fc70>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Anicet Murhula", "email"=>"anicetmurhula20@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"devise/registrations", "action"=>"create"} }[0m
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Exists? (971.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "anicetmurhula20@gmail.com"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRansac (0.4ms)[0m  [1m[31mROLLBACK[0m
   Rendering layout layouts/application.html.erb
   Rendering devise/registrations/new.html.erb within layouts/application
   Rendered devise/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 591)
@@ -900,11 +900,11 @@ Completed 200 OK in 32ms (Views: 19.6ms | ActiveRecord: 3.3ms | Allocations: 541
 Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:53:07 +0200
 Processing by CategoriesController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   ↳ app/controllers/categories_controller.rb:28:in `block in create'
   [1m[36mCategory Create (318.3ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", nil], ["created_at", "2022-08-10 09:53:07.526658"], ["updated_at", "2022-08-10 09:53:07.526658"]]
   ↳ app/controllers/categories_controller.rb:28:in `block in create'
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[31mROLLBACK[0m
   ↳ app/controllers/categories_controller.rb:28:in `block in create'
 Completed 500 Internal Server Error in 334ms (ActiveRecord: 319.0ms | Allocations: 4461)
 
@@ -929,11 +929,11 @@ Completed 200 OK in 101ms (Views: 63.5ms | ActiveRecord: 9.2ms | Allocations: 20
 Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:54:06 +0200
 Processing by CategoriesController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
-  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.6ms)[0m  [1m[35mBEGIN[0m
   ↳ app/controllers/categories_controller.rb:28:in `block in create'
   [1m[36mCategory Create (3.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", nil], ["created_at", "2022-08-10 09:54:06.694466"], ["updated_at", "2022-08-10 09:54:06.694466"]]
   ↳ app/controllers/categories_controller.rb:28:in `block in create'
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[31mROLLBACK[0m
   ↳ app/controllers/categories_controller.rb:28:in `block in create'
 Completed 500 Internal Server Error in 27ms (ActiveRecord: 4.5ms | Allocations: 4194)
 
@@ -958,11 +958,11 @@ Completed 200 OK in 115ms (Views: 70.8ms | ActiveRecord: 6.7ms | Allocations: 20
 Started POST "/categories" for 127.0.0.1 at 2022-08-10 11:54:52 +0200
 Processing by CategoriesController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search", "user_id"=>""}, "commit"=>"Create Category"}
-  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (1.1ms)[0m  [1m[35mBEGIN[0m
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
   [1m[36mCategory Create (2.9ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", nil], ["created_at", "2022-08-10 09:54:52.353134"], ["updated_at", "2022-08-10 09:54:52.353134"]]
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
-  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  [1m[36mTRansac (0.8ms)[0m  [1m[31mROLLBACK[0m
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
 Completed 500 Internal Server Error in 25ms (ActiveRecord: 4.8ms | Allocations: 3700)
 
@@ -1088,13 +1088,13 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 71ms (Views: 25.7ms | ActiveRecord: 0.0ms | Allocations: 3838)
 
 
-Started GET "/transactions" for 127.0.0.1 at 2022-08-11 11:17:10 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for 127.0.0.1 at 2022-08-11 11:17:10 +0200
+Processing by TransacsController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (125.9ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 131.8ms | Allocations: 1295)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (125.9ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 131.8ms | Allocations: 1295)
   Rendered layout layouts/application.html.erb (Duration: 362.4ms | Allocations: 37706)
 Completed 200 OK in 471ms (Views: 240.3ms | ActiveRecord: 125.9ms | Allocations: 40781)
 
@@ -1106,22 +1106,22 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 9ms (Views: 7.7ms | ActiveRecord: 0.0ms | Allocations: 954)
 
 
-Started GET "/transactions" for 127.0.0.1 at 2022-08-11 11:17:35 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for 127.0.0.1 at 2022-08-11 11:17:35 +0200
+Processing by TransacsController#index as HTML
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 732)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.6ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 14.9ms | Allocations: 732)
   Rendered layout layouts/application.html.erb (Duration: 24.8ms | Allocations: 3417)
 Completed 200 OK in 28ms (Views: 26.6ms | ActiveRecord: 0.6ms | Allocations: 3733)
 
 
-Started GET "/transactions/new" for 127.0.0.1 at 2022-08-11 11:17:54 +0200
-Processing by TransactionsController#new as HTML
+Started GET "/transacs/new" for 127.0.0.1 at 2022-08-11 11:17:54 +0200
+Processing by TransacsController#new as HTML
   Rendering layout layouts/application.html.erb
-  Rendering transactions/new.html.erb within layouts/application
-  Rendered transactions/new.html.erb within layouts/application (Duration: 117.0ms | Allocations: 3936)
+  Rendering transacs/new.html.erb within layouts/application
+  Rendered transacs/new.html.erb within layouts/application (Duration: 117.0ms | Allocations: 3936)
   Rendered layout layouts/application.html.erb (Duration: 117.6ms | Allocations: 4042)
 Completed 500 Internal Server Error in 287ms (ActiveRecord: 97.5ms | Allocations: 14203)
 
@@ -1139,13 +1139,13 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass
     20:       <%= check_box_tag "categories[#{category.id}]", category.name %>
     21:       <br />
   
-app/views/transactions/new.html.erb:18
-app/views/transactions/new.html.erb:8
-Started GET "/transactions/new" for 127.0.0.1 at 2022-08-11 14:37:07 +0200
-Processing by TransactionsController#new as HTML
+app/views/transacs/new.html.erb:18
+app/views/transacs/new.html.erb:8
+Started GET "/transacs/new" for 127.0.0.1 at 2022-08-11 14:37:07 +0200
+Processing by TransacsController#new as HTML
   Rendering layout layouts/application.html.erb
-  Rendering transactions/new.html.erb within layouts/application
-  Rendered transactions/new.html.erb within layouts/application (Duration: 271.3ms | Allocations: 3313)
+  Rendering transacs/new.html.erb within layouts/application
+  Rendered transacs/new.html.erb within layouts/application (Duration: 271.3ms | Allocations: 3313)
   Rendered layout layouts/application.html.erb (Duration: 420.1ms | Allocations: 3407)
 Completed 500 Internal Server Error in 1226ms (ActiveRecord: 383.3ms | Allocations: 10403)
 
@@ -1163,8 +1163,8 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass
     20:       <%= check_box_tag "categories[#{category.id}]", category.name %>
     21:       <br />
   
-app/views/transactions/new.html.erb:18
-app/views/transactions/new.html.erb:8
+app/views/transacs/new.html.erb:18
+app/views/transacs/new.html.erb:8
 Started GET "/" for 127.0.0.1 at 2022-08-11 14:37:20 +0200
 Processing by Rails::WelcomeController#index as HTML
   Rendering /home/anicetfantomas/.rbenv/versions/3.1.2/lib/ruby/gems/3.1.0/gems/railties-7.0.3.1/lib/rails/templates/rails/welcome/index.html.erb
@@ -1247,7 +1247,7 @@ Did you mean?  layouts/action_text/contents/content
                categories/category
                categories/form
                action_text/attachables/missing_attachable
-               categories_transactions/categories_transaction
+               categories_transacs/categories_transac
                devise/shared/links):
     1:  <%= render 'layouts/nav2' %>
     2: <section class="login-form">
@@ -1277,7 +1277,7 @@ Did you mean?  layouts/action_text/contents/content
                categories/category
                categories/form
                action_text/attachables/missing_attachable
-               categories_transactions/categories_transaction
+               categories_transacs/categories_transac
                devise/shared/links):
     1:  <%= render 'layouts/nav2' %>
     2: <section class="login-form">
@@ -1569,10 +1569,10 @@ Completed 200 OK in 66ms (Views: 64.2ms | Allocations: 6596)
 Started POST "/users" for 127.0.0.1 at 2022-08-12 11:38:44 +0200
 Processing by Devise::RegistrationsController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Vicky James", "email"=>"vicky@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Exists? (28.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "vicky@gmail.com"], ["LIMIT", 1]]
   [1m[36mUser Create (342.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at", "full_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["email", "vicky@gmail.com"], ["encrypted_password", "$2a$12$wkH1ijA0fUIo/GOZ4xWJ8eTXSwAN9ahPnUcn/5sdrSF0BXhHqyV1G"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["confirmation_token", "yYznDGnyxZ_ZmFaGx-SS"], ["confirmed_at", nil], ["confirmation_sent_at", "2022-08-12 09:38:45.108425"], ["unconfirmed_email", nil], ["created_at", "2022-08-12 09:38:45.108073"], ["updated_at", "2022-08-12 09:38:45.108073"], ["full_name", "Vicky James"]]
-  [1m[36mTRANSACTION (28.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (28.0ms)[0m  [1m[35mCOMMIT[0m
   Rendering devise/mailer/confirmation_instructions.html.erb
   Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 12.5ms | Allocations: 424)
 Devise::Mailer#confirmation_instructions: processed outbound mail in 23.5ms
@@ -1655,9 +1655,9 @@ Started GET "/users/confirmation?confirmation_token=[FILTERED]" for ::1 at 2022-
 Processing by Devise::ConfirmationsController#show as HTML
   Parameters: {"confirmation_token"=>"[FILTERED]"}
   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "yYznDGnyxZ_ZmFaGx-SS"], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.4ms)[0m  [1m[35mBEGIN[0m
   [1m[36mUser Update (132.3ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmed_at", "2022-08-12 09:53:50.146764"], ["updated_at", "2022-08-12 09:53:50.147416"], ["id", 1]]
-  [1m[36mTRANSACTION (41.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (41.4ms)[0m  [1m[35mCOMMIT[0m
 Redirected to http://localhost:3000/users/sign_in
 Completed 302 Found in 211ms (ActiveRecord: 181.5ms | Allocations: 8490)
 
@@ -1719,16 +1719,16 @@ Completed 500 Internal Server Error in 361ms (ActiveRecord: 99.1ms | Allocations
 
 
   
-ActionView::Template::Error (undefined local variable or method `transactions1s_path' for #<ActionView::Base:0x0000000001b580>
+ActionView::Template::Error (undefined local variable or method `transacs1s_path' for #<ActionView::Base:0x0000000001b580>
 
-         '.freeze;@output_buffer.append=( link_to 'Transactions', transactions1s_path, class: "nav-link" );@output_buffer.safe_append='
+         '.freeze;@output_buffer.append=( link_to 'Transacs', transacs1s_path, class: "nav-link" );@output_buffer.safe_append='
                                                                   ^^^^^^^^^^^^^^^^^^^
-Did you mean?  transactions_path
-               transaction_path):
+Did you mean?  transacs_path
+               transac_path):
     16:          <%= link_to 'Categories', categories_path, class: "nav-link" %>
     17:       </li>
     18:       <li class="nav-item">
-    19:          <%= link_to 'Transactions', transactions1s_path, class: "nav-link" %>
+    19:          <%= link_to 'Transacs', transacs1s_path, class: "nav-link" %>
     20:       </li>
     21:      
     22:       <li class="nav-item">
@@ -1889,66 +1889,66 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 53ms (Views: 16.1ms | ActiveRecord: 12.8ms | Allocations: 8036)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:27:38 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:27:38 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 1136)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.8ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 37.6ms | Allocations: 1136)
   Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 406)
   Rendered layout layouts/application.html.erb (Duration: 58.1ms | Allocations: 4172)
 Completed 200 OK in 88ms (Views: 61.2ms | ActiveRecord: 1.5ms | Allocations: 8269)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:27:40 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:27:40 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.8ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 2.1ms | Allocations: 325)
   Rendered layout layouts/application.html.erb (Duration: 16.1ms | Allocations: 3354)
 Completed 200 OK in 27ms (Views: 18.0ms | ActiveRecord: 1.5ms | Allocations: 5135)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:27:41 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:27:41 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (1.1ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (1.1ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 6.6ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 10.8ms | Allocations: 325)
   Rendered layout layouts/application.html.erb (Duration: 27.4ms | Allocations: 3341)
 Completed 200 OK in 42ms (Views: 27.5ms | ActiveRecord: 1.8ms | Allocations: 4951)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:27:43 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:27:43 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.5ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 1.8ms | Allocations: 325)
   Rendered layout layouts/application.html.erb (Duration: 16.8ms | Allocations: 3341)
 Completed 200 OK in 31ms (Views: 17.8ms | ActiveRecord: 1.1ms | Allocations: 4972)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:27:44 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:27:44 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.6ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.6ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 2.4ms | Allocations: 325)
   Rendered layout layouts/application.html.erb (Duration: 18.8ms | Allocations: 3341)
 Completed 200 OK in 35ms (Views: 22.0ms | ActiveRecord: 1.2ms | Allocations: 4948)
@@ -1993,38 +1993,38 @@ Processing by CategoriesController#index as HTML
 Completed 200 OK in 46ms (Views: 36.3ms | ActiveRecord: 2.3ms | Allocations: 5000)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:28:07 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:28:07 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.5ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.5ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 4.0ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 325)
   Rendered layout layouts/application.html.erb (Duration: 16.0ms | Allocations: 3345)
 Completed 200 OK in 25ms (Views: 16.6ms | ActiveRecord: 0.9ms | Allocations: 4946)
 
 
-Started GET "/transactions" for ::1 at 2022-08-12 13:28:28 +0200
-Processing by TransactionsController#index as HTML
+Started GET "/transacs" for ::1 at 2022-08-12 13:28:28 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (0.8ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.8ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 3.8ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 2.8ms | Allocations: 326)
   Rendered layout layouts/application.html.erb (Duration: 17.6ms | Allocations: 3345)
 Completed 200 OK in 37ms (Views: 20.3ms | ActiveRecord: 1.3ms | Allocations: 4958)
 
 
-Started GET "/transactions/new" for ::1 at 2022-08-12 13:28:32 +0200
-Processing by TransactionsController#new as HTML
+Started GET "/transacs/new" for ::1 at 2022-08-12 13:28:32 +0200
+Processing by TransacsController#new as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/new.html.erb within layouts/application
-  Rendered transactions/new.html.erb within layouts/application (Duration: 29.1ms | Allocations: 3060)
+  Rendering transacs/new.html.erb within layouts/application
+  Rendered transacs/new.html.erb within layouts/application (Duration: 29.1ms | Allocations: 3060)
   Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 3148)
 Completed 500 Internal Server Error in 54ms (ActiveRecord: 7.7ms | Allocations: 6805)
 
@@ -2042,16 +2042,16 @@ ActionView::Template::Error (undefined method `each' for nil:NilClass
     20:       <%= check_box_tag "categories[#{category.id}]", category.name %>
     21:       <br />
   
-app/views/transactions/new.html.erb:18
-app/views/transactions/new.html.erb:8
-Started GET "/transactions" for ::1 at 2022-08-12 13:28:40 +0200
-Processing by TransactionsController#index as HTML
+app/views/transacs/new.html.erb:18
+app/views/transacs/new.html.erb:8
+Started GET "/transacs" for ::1 at 2022-08-12 13:28:40 +0200
+Processing by TransacsController#index as HTML
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
   Rendering layout layouts/application.html.erb
-  Rendering transactions/index.html.erb within layouts/application
-  [1m[36mTransaction Load (1.3ms)[0m  [1m[34mSELECT "transactions".* FROM "transactions"[0m
-  ↳ app/views/transactions/index.html.erb:2
-  Rendered transactions/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 620)
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (1.3ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs"[0m
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 11.4ms | Allocations: 620)
   Rendered layouts/_navbar.html.erb (Duration: 2.6ms | Allocations: 325)
   Rendered layout layouts/application.html.erb (Duration: 22.2ms | Allocations: 3354)
 Completed 200 OK in 31ms (Views: 21.8ms | ActiveRecord: 1.8ms | Allocations: 4968)
@@ -2164,11 +2164,11 @@ Started POST "/categories" for ::1 at 2022-08-12 13:50:58 +0200
 Processing by CategoriesController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"}, "commit"=>"ADD CATEGORY"}
   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
   [1m[36mCategory Create (133.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", 1], ["created_at", "2022-08-12 11:50:58.520920"], ["updated_at", "2022-08-12 11:50:58.520920"]]
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
-  [1m[36mTRANSACTION (69.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (69.0ms)[0m  [1m[35mCOMMIT[0m
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
 Redirected to http://localhost:3000/categories/4
 Completed 302 Found in 220ms (ActiveRecord: 203.3ms | Allocations: 4002)
@@ -2184,10 +2184,10 @@ Completed 500 Internal Server Error in 95ms (ActiveRecord: 1.0ms | Allocations: 
 
 
   
-NoMethodError (undefined method `transactions' for #<Category id: 4, name: "Tesla", icon: "https://www.flaticon.com/free-icon/tesla_1348065?t...", user_id: 1, created_at: "2022-08-12 11:50:58.520920000 +0000", updated_at: "2022-08-12 11:50:58.520920000 +0000">
-Did you mean?  transaction
-               tansactions
-               tansactions=):
+NoMethodError (undefined method `transacs' for #<Category id: 4, name: "Tesla", icon: "https://www.flaticon.com/free-icon/tesla_1348065?t...", user_id: 1, created_at: "2022-08-12 11:50:58.520920000 +0000", updated_at: "2022-08-12 11:50:58.520920000 +0000">
+Did you mean?  transac
+               tansacs
+               tansacs=):
   
 app/controllers/categories_controller.rb:12:in `show'
 Started GET "/categories/new" for ::1 at 2022-08-12 13:51:59 +0200
@@ -2337,7 +2337,7 @@ Completed 500 Internal Server Error in 118ms (ActiveRecord: 1.1ms | Allocations:
 
 
   
-NameError (Rails couldn't find a valid model for Transactions association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+NameError (Rails couldn't find a valid model for Transacs association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
 
           raise NameError, msg
           ^^^^^):
@@ -2372,11 +2372,11 @@ Started POST "/categories" for ::1 at 2022-08-12 14:25:40 +0200
 Processing by CategoriesController#create as TURBO_STREAM
   Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"}, "commit"=>"ADD CATEGORY"}
   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
-  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
   [1m[36mCategory Create (1.1ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", 1], ["created_at", "2022-08-12 12:25:40.261076"], ["updated_at", "2022-08-12 12:25:40.261076"]]
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
-  [1m[36mTRANSACTION (44.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mTRansac (44.6ms)[0m  [1m[35mCOMMIT[0m
   ↳ app/controllers/categories_controller.rb:27:in `block in create'
 Redirected to http://localhost:3000/categories/5
 Completed 302 Found in 63ms (ActiveRecord: 46.4ms | Allocations: 3946)
@@ -2392,7 +2392,7 @@ Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.9ms | Allocations: 
 
 
   
-NameError (Rails couldn't find a valid model for Transactions association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+NameError (Rails couldn't find a valid model for Transacs association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
 
           raise NameError, msg
           ^^^^^):
@@ -2433,7 +2433,7 @@ Completed 500 Internal Server Error in 16ms (ActiveRecord: 1.0ms | Allocations: 
 
 
   
-NameError (Rails couldn't find a valid model for Transactions association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+NameError (Rails couldn't find a valid model for Transacs association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
 
           raise NameError, msg
           ^^^^^):
@@ -2462,10 +2462,548 @@ Completed 500 Internal Server Error in 17ms (ActiveRecord: 1.1ms | Allocations: 
 
 
   
-NameError (Rails couldn't find a valid model for Transactions association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
+NameError (Rails couldn't find a valid model for Transacs association. Please provide the :class_name option on the association declaration. If :class_name is already provided, make sure it's an ActiveRecord::Base subclass.
 
           raise NameError, msg
           ^^^^^):
   
 app/controllers/categories_controller.rb:12:in `show'
   [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (74.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRansac (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (819.9ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transacs_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b681382119"
+FOREIGN KEY ("transacs_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_f9a2e93f49"
+FOREIGN KEY ("categories_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRansac (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRansac (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (121.2ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transacs_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b681382119"
+FOREIGN KEY ("transacs_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_f9a2e93f49"
+FOREIGN KEY ("categories_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRansac (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRansac (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (74.4ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transacs_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b681382119"
+FOREIGN KEY ("transacs_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_f9a2e93f49"
+FOREIGN KEY ("categories_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRansac (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (18.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-13 09:08:28.157917"], ["updated_at", "2022-08-13 09:08:28.157917"]]
+  [1m[36mTRANSACTION (29.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (686.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "to_you_budget_development"[0m
+  [1m[35m (342.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "to_you_budget_test"[0m
+  [1m[35m (1118.7ms)[0m  [1m[35mCREATE DATABASE "to_you_budget_development" ENCODING = 'unicode'[0m
+  [1m[35m (1133.7ms)[0m  [1m[35mCREATE DATABASE "to_you_budget_test" ENCODING = 'unicode'[0m
+  [1m[35m (168.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (162.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220809083653)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (150.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "confirmation_token" character varying, "confirmed_at" timestamp(6), "confirmation_sent_at" timestamp(6), "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (72.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (53.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809083653"]]
+  [1m[36mTRANSACTION (26.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20220809084014)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "full_name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809084014"]]
+  [1m[36mTRANSACTION (32.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20220809101943)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (124.7ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809101943"]]
+  [1m[36mTRANSACTION (28.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (70.4ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transacs_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b681382119"
+FOREIGN KEY ("transacs_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_f9a2e93f49"
+FOREIGN KEY ("categories_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (64.8ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transacs_id" bigint NOT NULL, "categories_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b681382119"
+FOREIGN KEY ("transacs_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_f9a2e93f49"
+FOREIGN KEY ("categories_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (110.3ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transac_id" bigint NOT NULL, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_8275c5635f"
+FOREIGN KEY ("transac_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_4d3d0b13b5"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.9ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-13 09:31:24.570806"], ["updated_at", "2022-08-13 09:31:24.570806"]]
+  [1m[36mTRANSACTION (19.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (342.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "to_you_budget_development"[0m
+  [1m[35m (328.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "to_you_budget_test"[0m
+  [1m[35m (1549.7ms)[0m  [1m[35mCREATE DATABASE "to_you_budget_development" ENCODING = 'unicode'[0m
+  [1m[35m (964.9ms)[0m  [1m[35mCREATE DATABASE "to_you_budget_test" ENCODING = 'unicode'[0m
+  [1m[35m (139.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (150.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DeviseCreateUsers (20220809083653)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (127.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "email" character varying DEFAULT '' NOT NULL, "encrypted_password" character varying DEFAULT '' NOT NULL, "reset_password_token" character varying, "reset_password_sent_at" timestamp(6), "remember_created_at" timestamp(6), "confirmation_token" character varying, "confirmed_at" timestamp(6), "confirmation_sent_at" timestamp(6), "unconfirmed_email" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (74.4ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (65.1ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809083653"]]
+  [1m[36mTRANSACTION (18.5ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddNameToUsers (20220809084014)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "full_name" character varying[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809084014"]]
+  [1m[36mTRANSACTION (9.1ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategories (20220809101943)
+  [1m[36mTRANSACTION (1.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (118.6ms)[0m  [1m[35mCREATE TABLE "categories" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_b8e2f7adfc"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (52.0ms)[0m  [1m[35mCREATE INDEX "index_categories_on_user_id" ON "categories" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220809101943"]]
+  [1m[36mTRANSACTION (25.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (54.4ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transac_id" bigint NOT NULL, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_8275c5635f"
+FOREIGN KEY ("transac_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_4d3d0b13b5"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (1.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateCategoriesTransacs (20220809103211)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (94.0ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transac_id" bigint NOT NULL, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_8275c5635f"
+FOREIGN KEY ("transac_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_4d3d0b13b5"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTransacs (20220813082922)
+  [1m[36mTRANSACTION (2.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (138.1ms)[0m  [1m[35mCREATE TABLE "transacs" ("id" bigserial primary key, "name" character varying, "amount" decimal, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_48017f2d5a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (51.1ms)[0m  [1m[35mCREATE INDEX "index_transacs_on_user_id" ON "transacs" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.9ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220813082922"]]
+  [1m[36mTRANSACTION (24.6ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateCategoriesTransacs (20220813094412)
+  [1m[36mTRANSACTION (1.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (66.5ms)[0m  [1m[35mCREATE TABLE "categories_transacs" ("id" bigserial primary key, "transac_id" bigint NOT NULL, "category_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_8275c5635f"
+FOREIGN KEY ("transac_id")
+  REFERENCES "transacs" ("id")
+, CONSTRAINT "fk_rails_4d3d0b13b5"
+FOREIGN KEY ("category_id")
+  REFERENCES "categories" ("id")
+)[0m
+  [1m[35m (54.1ms)[0m  [1m[35mCREATE INDEX "index_categories_transacs_on_transac_id" ON "categories_transacs" ("transac_id")[0m
+  [1m[35m (52.5ms)[0m  [1m[35mCREATE INDEX "index_categories_transacs_on_category_id" ON "categories_transacs" ("category_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20220813094412"]]
+  [1m[36mTRANSACTION (17.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2022-08-13 09:44:28.738339"], ["updated_at", "2022-08-13 09:44:28.738339"]]
+  [1m[36mTRANSACTION (11.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT pg_advisory_unlock(2580995404631506380)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2022-08-13 11:46:42 +0200
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by SplashsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 3.3ms | Allocations: 775)
+  Rendered layout layouts/application.html.erb (Duration: 257.0ms | Allocations: 44533)
+Completed 200 OK in 286ms (Views: 265.9ms | ActiveRecord: 0.0ms | Allocations: 48892)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-13 11:46:50 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 273)
+  Rendered devise/shared/_links.html.erb (Duration: 2.9ms | Allocations: 746)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 40.0ms | Allocations: 6143)
+  Rendered layout layouts/application.html.erb (Duration: 88.9ms | Allocations: 8716)
+Completed 200 OK in 127ms (Views: 103.3ms | ActiveRecord: 0.0ms | Allocations: 16280)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-08-13 11:46:59 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar2.html.erb (Duration: 378.2ms | Allocations: 712)
+  Rendered devise/shared/_links.html.erb (Duration: 1.3ms | Allocations: 347)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 392.0ms | Allocations: 2905)
+  Rendered layout layouts/application.html.erb (Duration: 401.0ms | Allocations: 5467)
+Completed 200 OK in 409ms (Views: 404.5ms | ActiveRecord: 0.0ms | Allocations: 6908)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-13 11:47:02 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sindyepaa@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sindyepaa@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 11ms (ActiveRecord: 1.1ms | Allocations: 1994)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2022-08-13 11:47:43 +0200
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 23)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 140)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1615)
+  Rendered layout layouts/application.html.erb (Duration: 21.4ms | Allocations: 4076)
+Completed 200 OK in 29ms (Views: 26.2ms | ActiveRecord: 0.0ms | Allocations: 4770)
+
+
+Started POST "/users" for 127.0.0.1 at 2022-08-13 11:48:43 +0200
+Processing by Devise::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"full_name"=>"Tommy Shelby", "email"=>"tommy@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "tommy@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (1.3ms)[0m  [1m[32mINSERT INTO "users" ("email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email", "created_at", "updated_at", "full_name") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["email", "tommy@gmail.com"], ["encrypted_password", "$2a$12$kapW38WYQ5yuyxEUbmdSV.W64eRxsV1T5ZYHFW1C91prGQTOcEj4W"], ["reset_password_token", nil], ["reset_password_sent_at", nil], ["remember_created_at", nil], ["confirmation_token", "YyUccpMWSP2_6ssyzaWA"], ["confirmed_at", nil], ["confirmation_sent_at", "2022-08-13 09:48:44.216131"], ["unconfirmed_email", nil], ["created_at", "2022-08-13 09:48:44.215854"], ["updated_at", "2022-08-13 09:48:44.215854"], ["full_name", "Tommy Shelby"]]
+  [1m[36mTRANSACTION (31.1ms)[0m  [1m[35mCOMMIT[0m
+  Rendering devise/mailer/confirmation_instructions.html.erb
+  Rendered devise/mailer/confirmation_instructions.html.erb (Duration: 2.9ms | Allocations: 411)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 15.6ms
+Delivered mail 62f7737c5ab2a_323c3d906794a@anicetfantomas-HP-EliteBook-2540p-SK983UP-ABA.mail (16.3ms)
+Date: Sat, 13 Aug 2022 11:48:44 +0200
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: tommy@gmail.com
+Message-ID: <62f7737c5ab2a_323c3d906794a@anicetfantomas-HP-EliteBook-2540p-SK983UP-ABA.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome tommy@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=YyUccpMWSP2_6ssyzaWA">Confirm my account</a></p>
+
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 624ms (ActiveRecord: 33.4ms | Allocations: 29944)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-13 11:48:44 +0200
+Processing by SplashsController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering splashs/index.html.erb within layouts/application
+  Rendered splashs/index.html.erb within layouts/application (Duration: 1.0ms | Allocations: 218)
+  Rendered layout layouts/application.html.erb (Duration: 12.3ms | Allocations: 2684)
+Completed 200 OK in 15ms (Views: 13.6ms | ActiveRecord: 0.0ms | Allocations: 3056)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2022-08-13 11:48:48 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar2.html.erb (Duration: 3.2ms | Allocations: 266)
+  Rendered devise/shared/_links.html.erb (Duration: 1.1ms | Allocations: 191)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 8.6ms | Allocations: 1449)
+  Rendered layout layouts/application.html.erb (Duration: 17.4ms | Allocations: 3802)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.0ms | Allocations: 4438)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-13 11:48:50 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tommy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "tommy@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 411ms (ActiveRecord: 0.7ms | Allocations: 2565)
+
+
+Started GET "/users/confirmation?confirmation_token=[FILTERED]" for ::1 at 2022-08-13 11:49:58 +0200
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "YyUccpMWSP2_6ssyzaWA"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (0.8ms)[0m  [1m[33mUPDATE "users" SET "confirmed_at" = $1, "updated_at" = $2 WHERE "users"."id" = $3[0m  [["confirmed_at", "2022-08-13 09:49:58.137350"], ["updated_at", "2022-08-13 09:49:58.138046"], ["id", 1]]
+  [1m[36mTRANSACTION (102.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 127ms (ActiveRecord: 103.5ms | Allocations: 5532)
+
+
+Started GET "/users/sign_in" for ::1 at 2022-08-13 11:49:58 +0200
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/sessions/new.html.erb within layouts/application
+  Rendered layouts/_navbar2.html.erb (Duration: 1.6ms | Allocations: 281)
+  Rendered devise/shared/_links.html.erb (Duration: 0.8ms | Allocations: 191)
+  Rendered devise/sessions/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 1440)
+  Rendered layout layouts/application.html.erb (Duration: 17.5ms | Allocations: 3936)
+Completed 200 OK in 23ms (Views: 19.1ms | ActiveRecord: 0.0ms | Allocations: 4667)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-08-13 11:50:01 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"vicky@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vicky@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 22ms (ActiveRecord: 0.5ms | Allocations: 1520)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-08-13 11:50:03 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"vicky@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vicky@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 21ms (ActiveRecord: 1.0ms | Allocations: 1529)
+
+
+Started POST "/users/sign_in" for ::1 at 2022-08-13 11:50:04 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"vicky@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "vicky@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 28ms (ActiveRecord: 0.9ms | Allocations: 1510)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2022-08-13 11:50:08 +0200
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"tommy@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "tommy@gmail.com"], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 337ms (ActiveRecord: 0.5ms | Allocations: 2416)
+
+
+Started GET "/" for 127.0.0.1 at 2022-08-13 11:50:08 +0200
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by CategoriesController#index as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (1.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1282)
+  Rendered layouts/_navbar.html.erb (Duration: 2.9ms | Allocations: 667)
+  Rendered layout layouts/application.html.erb (Duration: 18.7ms | Allocations: 4711)
+Completed 200 OK in 36ms (Views: 20.2ms | ActiveRecord: 3.5ms | Allocations: 8581)
+
+
+Started GET "/transacs" for 127.0.0.1 at 2022-08-13 11:50:10 +0200
+Processing by TransacsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (1.2ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" WHERE "transacs"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 9.3ms | Allocations: 1135)
+  Rendered layouts/_navbar.html.erb (Duration: 2.2ms | Allocations: 406)
+  Rendered layout layouts/application.html.erb (Duration: 20.6ms | Allocations: 4159)
+Completed 200 OK in 53ms (Views: 28.7ms | ActiveRecord: 3.9ms | Allocations: 9297)
+
+
+Started GET "/transacs" for 127.0.0.1 at 2022-08-13 11:50:16 +0200
+Processing by TransacsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering transacs/index.html.erb within layouts/application
+  [1m[36mTransac Load (0.5ms)[0m  [1m[34mSELECT "transacs".* FROM "transacs" WHERE "transacs"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transacs/index.html.erb:2
+  Rendered transacs/index.html.erb within layouts/application (Duration: 4.5ms | Allocations: 639)
+  Rendered layouts/_navbar.html.erb (Duration: 4.0ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 15.6ms | Allocations: 3352)
+Completed 200 OK in 29ms (Views: 20.2ms | ActiveRecord: 1.0ms | Allocations: 5132)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-13 11:50:19 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 3.9ms | Allocations: 655)
+  Rendered layouts/_navbar.html.erb (Duration: 2.0ms | Allocations: 326)
+  Rendered layout layouts/application.html.erb (Duration: 13.9ms | Allocations: 3358)
+Completed 200 OK in 25ms (Views: 14.6ms | ActiveRecord: 1.1ms | Allocations: 5021)
+
+
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-13 11:50:21 +0200
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 4.5ms | Allocations: 864)
+  Rendered categories/new.html.erb within layouts/application (Duration: 7.7ms | Allocations: 1182)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 17.9ms | Allocations: 3889)
+Completed 200 OK in 42ms (Views: 21.1ms | ActiveRecord: 3.1ms | Allocations: 7584)
+
+
+Started POST "/categories" for 127.0.0.1 at 2022-08-13 11:50:28 +0200
+Processing by CategoriesController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "category"=>{"name"=>"Tesla", "icon"=>"https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"}, "commit"=>"ADD CATEGORY"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mCategory Create (1.5ms)[0m  [1m[32mINSERT INTO "categories" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Tesla"], ["icon", "https://www.flaticon.com/free-icon/tesla_1348065?term=tesla&page=1&position=3&page=1&position=3&related_id=1348065&origin=search"], ["user_id", 1], ["created_at", "2022-08-13 09:50:28.177471"], ["updated_at", "2022-08-13 09:50:28.177471"]]
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+  [1m[36mTRANSACTION (55.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/categories_controller.rb:27:in `block in create'
+Redirected to http://127.0.0.1:3000/categories/1
+Completed 302 Found in 84ms (ActiveRecord: 57.9ms | Allocations: 4651)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2022-08-13 11:50:28 +0200
+Processing by CategoriesController#show as TURBO_STREAM
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 31.1ms | Allocations: 5900)
+  Rendered layout layouts/application.html.erb (Duration: 31.9ms | Allocations: 5993)
+Completed 500 Internal Server Error in 60ms (ActiveRecord: 0.9ms | Allocations: 11669)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `category' for #<ActionView::Base:0x0000000000edd0>
+
+  '.freeze;@output_buffer.append=  link_to category_path(category.id) do @output_buffer.safe_append='
+                                                         ^^^^^^^^
+Did you mean?  @category):
+     5:   <p class="alert alert-danger"><% alert %></p>
+     6: <% end %>
+     7: <section class="container>
+     8:   <%= link_to category_path(category.id) do %>
+     9:     <article class="row border my-1">
+    10:       <div class="col-3">
+    11:         <img src=<%= category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+  
+app/views/categories/show.html.erb:8
+Started GET "/categories/new" for 127.0.0.1 at 2022-08-13 11:59:46 +0200
+Processing by CategoriesController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/new.html.erb within layouts/application
+  Rendered categories/_form.html.erb (Duration: 5.8ms | Allocations: 895)
+  Rendered categories/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 1258)
+  Rendered layouts/_navbar.html.erb (Duration: 4.4ms | Allocations: 645)
+  Rendered layout layouts/application.html.erb (Duration: 26.3ms | Allocations: 4840)
+Completed 200 OK in 63ms (Views: 30.5ms | ActiveRecord: 14.0ms | Allocations: 10331)
+
+
+Started GET "/categories" for 127.0.0.1 at 2022-08-13 11:59:50 +0200
+Processing by CategoriesController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering categories/index.html.erb within layouts/application
+  [1m[36mCategory Load (0.6ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/categories/index.html.erb:8
+  Rendered categories/index.html.erb within layouts/application (Duration: 5.4ms | Allocations: 1099)
+  Rendered layouts/_navbar.html.erb (Duration: 1.5ms | Allocations: 325)
+  Rendered layout layouts/application.html.erb (Duration: 14.6ms | Allocations: 3801)
+Completed 200 OK in 27ms (Views: 15.1ms | ActiveRecord: 1.1ms | Allocations: 5746)
+
+
+Started GET "/categories/1" for 127.0.0.1 at 2022-08-13 11:59:53 +0200
+Processing by CategoriesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mCategory Load (0.4ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/categories_controller.rb:50:in `set_category'
+  Rendering layout layouts/application.html.erb
+  Rendering categories/show.html.erb within layouts/application
+  Rendered categories/show.html.erb within layouts/application (Duration: 11.2ms | Allocations: 4133)
+  Rendered layout layouts/application.html.erb (Duration: 11.8ms | Allocations: 4221)
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 1.0ms | Allocations: 6455)
+
+
+  
+ActionView::Template::Error (uninitialized constant #<Class:0x00007f8972b7b3c8>::Icon
+
+        <img src='.freeze;@output_buffer.append=( @category.icon );@output_buffer.safe_append=' alt='.freeze; Category Icon;@output_buffer.safe_append=' class="m-1 img-fluid rounded-1" > 
+                                                                                                                       ^^^^):
+     8:   <%= link_to category_path(@category.id) do %>
+     9:     <article class="row border my-1">
+    10:       <div class="col-3">
+    11:         <img src=<%= @category.icon %> alt=<% Category Icon%> class="m-1 img-fluid rounded-1" > 
+    12:       </div>
+    13:       <div class="col-6 pt-3">
+    14:         <p class="category-name"><% @category.name %></p>
+  
+app/views/categories/show.html.erb:11
+app/views/categories/show.html.erb:8

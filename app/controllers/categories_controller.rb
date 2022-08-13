@@ -9,7 +9,7 @@ class CategoriesController < ApplicationController
 
   # GET /categories/1 or /categories/1.json
   def show
-    @transactions = @category.transactions
+    @transacs = @category.transacs
   end
 
   # GET /categories/new
