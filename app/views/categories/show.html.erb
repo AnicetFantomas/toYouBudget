@@ -20,14 +20,14 @@
     </article>
   <% end %>
   <br>
-  <% @transacs.each do |trans| %>
+  <% @transacs.each do |transac| %>
     <article class="row border my-1">
       <div class="col-9">
-        <p class="trans-name">Transac <%= trans.name %></p>
-        <p class="date"><%= trans.created_at  %><%= trans.name %></p>
+        <p class="trans-name">Transacaction <%= transac.name %></p>
+        <p class="date"><%= transac.created_at  %><%= transac.name %></p>
       </div>
        <div>
-        <span class="amount">$<%= trans.amount %><span>
+        <span class="amount">$<%= transac.amount %><span>
       </div>
     </article>
   <% end %>
