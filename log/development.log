@@ -7632,3 +7632,16 @@ Processing by TransacsController#new as HTML
 Completed 200 OK in 26ms (Views: 19.1ms | ActiveRecord: 0.8ms | Allocations: 7091)
 
 
+Started GET "/transacs/new" for 127.0.0.1 at 2022-08-13 23:49:58 +0200
+Processing by TransacsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering transacs/new.html.erb within layouts/application
+  [1m[36mCategory Load (0.5ms)[0m  [1m[34mSELECT "categories".* FROM "categories" WHERE "categories"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/transacs/new.html.erb:18
+  Rendered transacs/new.html.erb within layouts/application (Duration: 7.0ms | Allocations: 2018)
+  Rendered layouts/_navbar.html.erb (Duration: 2.3ms | Allocations: 656)
+  Rendered layout layouts/application.html.erb (Duration: 18.3ms | Allocations: 5596)
+Completed 200 OK in 32ms (Views: 21.9ms | ActiveRecord: 0.9ms | Allocations: 8011)
+
+
