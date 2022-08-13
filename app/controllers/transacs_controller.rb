@@ -13,7 +13,7 @@ class TransacsController < ApplicationController
   # GET /transacs/new
   def new
     @transac = Transac.new
-    @categoties = Category.where(user: current_user)
+    @categories = Category.where(user: current_user)
   end
 
   # GET /transacs/1/edit
@@ -59,7 +59,7 @@ class TransacsController < ApplicationController
     
     def create_categ_transacs
       params[:categories].each do |k, _v|
-        CategoriesTransac.create(category: Category.find(k), transacs: @transacs)
+        CategoriesTransac.create(category: Category.find(k), transac: @transacs)
       end
     end
 

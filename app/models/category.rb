@@ -5,6 +5,8 @@ class Category < ApplicationRecord
   validates :name, presence: true
 
   def amount 
-    0
+    result = 0 
+    transacs.each { |t| result += t.amount } 
+    result 
   end
 end

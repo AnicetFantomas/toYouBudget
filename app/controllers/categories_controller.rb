@@ -11,6 +11,7 @@ class CategoriesController < ApplicationController
   def show
     @transacs = @category.transacs
   end
+  
 
   # GET /categories/new
   def new
