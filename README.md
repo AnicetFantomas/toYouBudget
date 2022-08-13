@@ -89,4 +89,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](./MIT.md) licensed.
+This project is [Creative common](https://creativecommons.org/licenses/by-nc/4.0/) licensed.
