@@ -1,0 +1,40 @@
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><% alert %></p>
+<% end %>
+<section class="container>
+  <%= link_to category_path(@category.id) do %>
+    <article class="row border my-1">
+      <div class="col-3">
+        <img src="<%= @category.icon %>" alt="Category Icon" class="m-1 img-fluid rounded-1" /> 
+      </div>
+      <div class="col-6 pt-3">
+        <p class="category-name"><%= @category.name %></p>
+        <span class="date" ><%= @category.created_at %> </span>
+      </div>
+      <div>
+        <span class="amount-dsl">$<%= @category.amount %></span>
+      </div>
+    </article>
+  <% end %>
+  <br>
+  <% @transacs.each do |transac| %>
+    <article class="row border my-1">
+      <div class="col-9">
+        <p class="trans-name">Transacaction <%= transac.name %></p>
+        <p class="date"><%= transac.created_at  %><%= transac.name %></p>
+      </div>
+       <div>
+        <span class="amount">$<%= transac.amount %><span>
+      </div>
+    </article>
+  <% end %>
+</section>
+
+<div class="bottom-container position-fixed bottom-o w-100" >
+  <div class="inner-bottom-container text-center">
+    <%= link_to "NEW TRANSACTION", new_transac_path, class:"buttom-btn" %>
+  </div>
+</div>

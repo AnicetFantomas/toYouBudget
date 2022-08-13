@@ -1,0 +1,9 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  transacs: one
+  categories: one
+
+two:
+  transacs: two
+  categories: two
