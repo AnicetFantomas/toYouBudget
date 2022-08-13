@@ -2,14 +2,16 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 # SuperBudget-app
 
-![image](https://github.com/sentayhu19/Budget-app/blob/dev/public/mobile001.png)
-![image](https://github.com/sentayhu19/Budget-app/blob/dev/public/mobile002.png)
+
+![mobile](https://user-images.githubusercontent.com/94958024/184503472-477d6ab6-9601-443f-bbcd-33204dc55c75.gif)
+
+
 
 
 ### Description 
 The Super Budget app is a mobile web application where you can manage your budget: you have a list of transactions associated with a category, so that you can see how much money you spent and on what. built with Ruby on Rails
 
-[Live Demo Here](https://super-budget.herokuapp.com/) 
+
 
 
 ### Cloning the project
